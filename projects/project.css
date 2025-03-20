@@ -1,3 +1,172 @@
+/* Polices */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #ff85a2;
+    --secondary-color: #ffd1dc;
+    --dark-color: #333;
+    --light-color: #fff;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* Navigation */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--dark-color);
+    transition: var(--transition);
+    z-index: 99;
+    padding: 2rem;
+}
+
+.menu.active {
+    left: 0;
+}
+
+.menu ul {
+    list-style: none;
+    margin-top: 5rem;
+}
+
+.menu li {
+    margin-bottom: 1rem;
+}
+
+.menu a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: var(--transition);
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.menu a:hover {
+    color: var(--primary-color);
+}
+
+/* Social Icons */
+.social-icons {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-color);
+    padding: 1rem 0.5rem;
+    border-radius: 10px 0 0 10px;
+    z-index: 90;
+}
+
+.social-icons a {
+    color: var(--light-color);
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #ff6b8b;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--light-color);
+    margin: 0 1rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
 /* Project Page Specific Styles */
 
 /* Hero Section */
@@ -437,6 +606,7 @@
     object-fit: contain;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
     .next-project-card {
         flex-direction: column;
@@ -455,5 +625,25 @@
     
     .project-header h1 {
         font-size: 1.8rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .social-icons {
+        padding: 0.5rem 0.3rem;
+    }
+    
+    .social-icons a {
+        font-size: 1rem;
     }
 }
