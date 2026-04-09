@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"2025\\\\|2026\" /home/acheng/Projects/marie/My_Portfolio/projects/*.html)",
+      "Bash(ls /home/acheng/Projects/marie/My_Portfolio/images/salomon*)"
+    ]
+  }
+}

@@ -1,9 +1,14 @@
 // Menu Toggle amélioré
 const menuBtn = document.getElementById('menuBtn');
+const menuCloseBtn = document.getElementById('menuCloseBtn');
 const menu = document.getElementById('menu');
 
 menuBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
+});
+
+menuCloseBtn.addEventListener('click', () => {
+    menu.classList.remove('active');
 });
 
 // Fermer le menu si on clique à l'extérieur (uniquement sur mobile)

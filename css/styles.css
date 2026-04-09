@@ -69,6 +69,17 @@ header {
     left: 0;
 }
 
+.menu-close-btn {
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
 .menu ul {
     list-style: none;
     margin-top: 5rem;
@@ -261,7 +272,13 @@ section h2::after {
     color: var(--primary-color);
     font-weight: 500;
     transition: var(--transition);
-    opacity: 0;
+    opacity: 1;
+}
+
+@media (hover: hover) {
+    .view-project {
+        opacity: 0;
+    }
 }
 
 .view-project i {
